@@ -1,7 +1,5 @@
 package com.github.chenqimiao.statemachine.machine;
 
-import com.github.chenqimiao.statemachine.Action;
-import com.github.chenqimiao.statemachine.Condition;
 import com.github.chenqimiao.statemachine.StateMachine;
 import com.github.chenqimiao.statemachine.StateMachineFactory;
 import com.github.chenqimiao.statemachine.builder.StateMachineBuilder;

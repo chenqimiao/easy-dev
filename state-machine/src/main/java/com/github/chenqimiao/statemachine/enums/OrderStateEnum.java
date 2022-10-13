@@ -1,12 +1,14 @@
 package com.github.chenqimiao.statemachine.enums;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 /**
  * @author Qimiao Chen
  * @date 2022-10-13 17:38
  **/
 @AllArgsConstructor
+@Getter
 public enum OrderStateEnum {
 
 
