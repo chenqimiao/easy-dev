@@ -57,7 +57,12 @@ public class EngineFlow<C,R,P> {
         }
         for (BaseProcessor<C> baseProcessor : baseProcessors) {
             try {
-                baseProcessor.execute(flowContext.getContext());
+                if (baseProcessor.canExecute(flowContext.getContext())) {
+                    baseProcessor.execute(flowContext.getContext());
+                }
+                if (baseProcessor.breakExecute(flowContext.getContext())) {
+                    break;
+                }
             } catch (Exception e) {
                 log.error("[{}]: exec error, msg is [{}], context is [{}]", getFlowScene(), e.getMessage(), JSONObject.toJSONString(flowContext), e);
                 if (exceptionHandler != null) {
