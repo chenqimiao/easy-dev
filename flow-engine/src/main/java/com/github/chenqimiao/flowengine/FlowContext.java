@@ -1,4 +1,4 @@
-package com.github.chenqimiao.statemachine;
+package com.github.chenqimiao.flowengine;
 
 import lombok.Data;
 
