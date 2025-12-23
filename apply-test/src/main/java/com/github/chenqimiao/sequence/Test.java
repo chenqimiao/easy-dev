@@ -9,7 +9,9 @@ import java.util.Set;
  **/
 public class Test {
     public static void main(String[] args) {
-        IdentifierGenerator identifierGenerator = new DefaultIdentifierGenerator();
+        // 分布式环境中可以用数据库自增id来做workId
+        long workId = 1;
+        IdentifierGenerator identifierGenerator = new DefaultIdentifierGenerator(workId);
         Set<Long> ids = new HashSet<>();
         int i = 0;
         while (true) {

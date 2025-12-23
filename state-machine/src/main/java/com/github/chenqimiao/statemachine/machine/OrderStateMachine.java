@@ -5,8 +5,8 @@ import com.github.chenqimiao.statemachine.StateMachineFactory;
 import com.github.chenqimiao.statemachine.builder.StateMachineBuilder;
 import com.github.chenqimiao.statemachine.builder.StateMachineBuilderFactory;
 import com.github.chenqimiao.statemachine.context.OrderStateContext;
-import com.github.chenqimiao.statemachine.enums.OrderStateEventEnum;
 import com.github.chenqimiao.statemachine.enums.OrderStateEnum;
+import com.github.chenqimiao.statemachine.enums.OrderStateEventEnum;
 
 /**
  * @author Qimiao Chen

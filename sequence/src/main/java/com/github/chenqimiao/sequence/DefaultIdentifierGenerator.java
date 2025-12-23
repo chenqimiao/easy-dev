@@ -1,6 +1,7 @@
 package com.github.chenqimiao.sequence;
 
-import java.net.InetAddress;
+import io.github.mocreates.Sequence;
+import io.github.mocreates.config.DefaultSequenceConfig;
 
 /**
  * @author Qimiao Chen
@@ -9,21 +10,14 @@ import java.net.InetAddress;
 public class DefaultIdentifierGenerator implements IdentifierGenerator{
     private final Sequence sequence;
 
-    public DefaultIdentifierGenerator() {
-        this.sequence = new Sequence(null);
+
+
+    public DefaultIdentifierGenerator(long workerId) {
+        DefaultSequenceConfig defaultSequenceConfig = new DefaultSequenceConfig();
+        defaultSequenceConfig.setWorkerId(workerId);
+        sequence =  new Sequence(defaultSequenceConfig);
     }
 
-    public DefaultIdentifierGenerator(InetAddress inetAddress) {
-        this.sequence = new Sequence(inetAddress);
-    }
-
-    public DefaultIdentifierGenerator(long workerId, long dataCenterId) {
-        this.sequence = new Sequence(workerId, dataCenterId);
-    }
-
-    public DefaultIdentifierGenerator(Sequence sequence) {
-        this.sequence = sequence;
-    }
 
     @Override
     public Long nextId() {
